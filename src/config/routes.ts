@@ -1,10 +1,6 @@
-type routes = {
-    path: string,
-    method: "post" | "get" | "put" | "delete" | "path",
-    callback: any,
-};
+import { TRoutes } from "./routes.types";
 
-const routes: routes[] = [
+const routes: TRoutes[] = [
     {
         path: "/th",
         method: "get",
