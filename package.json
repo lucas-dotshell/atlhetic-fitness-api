@@ -1,0 +1,25 @@
+{
+  "name": "atlhetic-fitness-api",
+  "version": "1.0.0",
+  "description": "A simple api for atlhetic fitness gym",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "dev": "npx tsc && node --watch --env-file=.env src/server.js",
+    "compile": "npx tsc",
+    "test": "test"
+  },
+  "author": "lucasportugal04@icloud.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.1"
+  }
+}
