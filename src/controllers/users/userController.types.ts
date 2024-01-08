@@ -1,27 +1,25 @@
-export type TPersonaltrainer = {
+export type TAbstractPersonaltrainer = {
     name: string,
-    image: string,
-    email: string,
-    ducument: string,
-    passwd: string,
-    accessLevel: "master" | "admin" | "user",
+    picture: string,
+    accessLevel: "personal" | "admin" | "athletic",
     birthDate: string,
-    gender: "M" | "F",
+    gender: "M" | "F" | "Other",
     active: boolean,
 };
 
-export type TAthletic = {
+export type TAbstractAthletic = {
     name: string,
-    image: string,
-    email: string,
-    gender: "M" | "F",
-    ducument: string,
+    picture: string,
+    accessLevel: "personal" | "admin" | "athletic",
+    gender: "M" | "F" | "Other",
     birthDate: string,
     trainerId: string,
     notes: string,
-    objective: string,
     startWeight: number,
     startHeight: number,
     active: boolean,
 };
 
+export type TConcrectUser = {
+
+}

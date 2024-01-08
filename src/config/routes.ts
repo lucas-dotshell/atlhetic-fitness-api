@@ -1,4 +1,9 @@
-import { TRoutes } from "./routes.types";
+
+type TRoutes = {
+    path: string,
+    method: "post" | "get" | "put" | "delete" | "path",
+    callback: any,
+};
 
 const routes: TRoutes[] = [
     {

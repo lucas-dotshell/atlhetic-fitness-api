@@ -5,12 +5,14 @@ const App = express.application;
 const port: string | number = process.env?.PORT || 3000;
 const version: string = process.env.API_VERSION || "v1";
 
+(global as any).isRequired = (paramName: string | null = null) => { throw new Error(`${paramName || "One or more params"} is required`) };
+
 App.use(express.json({ limit: "10mb" }));
 App.disable('x-powered-by');
 
 routes.map((i) => App[i.method](`/${version}/${i.path}/`, i.callback));
 
-App.use((req: any, res: express.Response) => {
+App.use((req: express.Request, res: express.Response) => {
     res.status(404).json({
         error: true,
         message: "Não encontrado.",
